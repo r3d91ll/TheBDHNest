@@ -1,0 +1,30 @@
+# TheBDHNest Configuration
+# Copy to config.yaml and customize
+
+monitoring:
+  update_interval: 10           # Dashboard refresh (seconds)
+  port: 8050                    # Web server port
+  debug: false                  # Debug mode
+
+paths:
+  # Where BDH experiments live (Phase 0: point to your experiments location)
+  experiments_root: "../TheNest/BDH_Dashboard_old/experiments/"
+
+  # Cache directory
+  cache_directory: "./cache/"
+
+display:
+  max_experiments: 50           # Gallery limit
+  show_fisher: false            # Fisher viz (optional - set true if working)
+  show_microscope: true         # Neural Microscope
+
+gpu:
+  monitoring_device: "cuda:1"   # GPU for monitoring tasks
+  inference_device: "cuda:0"    # GPU for model inference
+
+# FUTURE (Phase 1): TheNest platform settings
+# datasets:
+#   data_root: "./data"
+#   auto_download: true
+# training:
+#   default_device: "cuda:0"
